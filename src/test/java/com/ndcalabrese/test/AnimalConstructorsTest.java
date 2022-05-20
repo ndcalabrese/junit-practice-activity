@@ -15,7 +15,6 @@ public class AnimalConstructorsTest {
         Animal test1 = new Animal("test1", false);
         Animal test2 = new Animal("test2");
         Animal test3 = new Animal(true);
-        Animal test4 = new Animal();
 
         assertEquals("test1", test1.getName());
         assertFalse(test1.getIsDog());
@@ -26,8 +25,21 @@ public class AnimalConstructorsTest {
         assertNull(test3.getName());
         assertTrue(test3.getIsDog());
 
-        assertNull(test4.getName());
-        assertFalse(test4.getIsDog());
     }
+
+    Animal setterTest = new Animal();
+
+    @Test
+    public void setNameTest() {
+        setterTest.setName("test name");
+        assertEquals("test name", setterTest.getName());
+    }
+
+    @Test
+    public void setIsDogTest() {
+        setterTest.setIsDog(true);
+        assertTrue(setterTest.getIsDog());
+    }
+
 
 }

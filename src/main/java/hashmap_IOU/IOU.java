@@ -1,5 +1,6 @@
 package hashmap_IOU;
 
+import java.util.Collection;
 import java.util.HashMap;
 
 /**
@@ -16,6 +17,10 @@ public class IOU {
 
     public void setSum(String toWhom, double amount) {
         hashmap.put(toWhom, amount);
+    }
+
+    public Collection<String> getListOfPeopleOwed() {
+        return hashmap.keySet();
     }
 
     public double howMuchDoIOweTo(String toWhom) {
